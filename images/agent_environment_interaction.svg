@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f9f9f9" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="24" text-anchor="middle" fill="#333">Agent-Environment Interaction</text>
+  
+  <!-- Game Environment -->
+  <rect x="400" y="100" width="350" height="300" rx="10" ry="10" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+  
+  <!-- Maze in Environment -->
+  <rect x="420" y="120" width="310" height="260" rx="5" ry="5" fill="#fff" stroke="#333" stroke-width="1"/>
+  
+  <!-- Maze walls -->
+  <rect x="420" y="170" width="200" height="10" fill="#333"/>
+  <rect x="530" y="170" width="10" height="100" fill="#333"/>
+  <rect x="420" y="270" width="200" height="10" fill="#333"/>
+  <rect x="620" y="170" width="10" height="110" fill="#333"/>
+  <rect x="530" y="320" width="100" height="10" fill="#333"/>
+  <rect x="530" y="320" width="10" height="60" fill="#333"/>
+  
+  <!-- Agent (robot) -->
+  <circle cx="450" cy="140" r="15" fill="#4fa4a4" stroke="#333" stroke-width="1"/>
+  <text x="450" y="145" font-family="Arial" font-size="14" text-anchor="middle" fill="white">A</text>
+  
+  <!-- Goal/Reward -->
+  <circle cx="700" cy="350" r="15" fill="#ffcc00" stroke="#333" stroke-width="1"/>
+  <text x="700" y="355" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">G</text>
+  
+  <!-- Agent's Brain -->
+  <ellipse cx="150" cy="200" rx="100" ry="80" fill="#4fa4a4" stroke="#333" stroke-width="2"/>
+  <text x="150" y="180" font-family="Arial" font-size="18" text-anchor="middle" fill="white">Agent's</text>
+  <text x="150" y="210" font-family="Arial" font-size="18" text-anchor="middle" fill="white">Brain</text>
+  
+  <!-- Observation Arrow -->
+  <path d="M 400 150 L 260 180" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="330" y="150" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Observation</text>
+  
+  <!-- Action Arrow -->
+  <path d="M 260 220 L 400 250" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="330" y="250" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Action</text>
+  
+  <!-- Reward Arrow -->
+  <path d="M 400 200 L 260 200" stroke="#ffcc00" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <text x="330" y="190" font-family="Arial" font-size="14" text-anchor="middle" fill="#ffcc00">Reward</text>
+  
+  <!-- Arrowhead marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Thought Bubble -->
+  <ellipse cx="150" cy="100" rx="120" ry="40" fill="white" stroke="#4fa4a4" stroke-width="1"/>
+  <text x="150" y="95" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">"If I go right, I might</text>
+  <text x="150" y="115" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">get a better reward!"</text>
+  
+  <!-- Connecting Line to Thought -->
+  <path d="M 150 160 Q 150 140 150 120" stroke="#4fa4a4" stroke-width="1" fill="none"/>
+  
+  <!-- Legend -->
+  <rect x="50" y="400" width="700" height="80" rx="5" ry="5" fill="#e6f7f7" stroke="#4fa4a4" stroke-width="1"/>
+  <text x="400" y="420" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">How the Agent Learns:</text>
+  <text x="400" y="445" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">1. Agent observes the current state of the environment (where walls and goals are)</text>
+  <text x="400" y="465" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">2. Agent decides on an action (move up, down, left, or right)</text>
+  <text x="400" y="485" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">3. Agent receives a reward (positive for good moves, negative for hitting walls)</text>
+</svg>

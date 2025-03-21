@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f9f9f9" rx="10" ry="10"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="24" text-anchor="middle" fill="#333">Reward System in Reinforcement Learning</text>
+  
+  <!-- Reward Scale -->
+  <rect x="150" y="100" width="500" height="80" rx="10" ry="10" fill="#e6e6e6" stroke="#333" stroke-width="2"/>
+  
+  <!-- Negative Rewards -->
+  <rect x="150" y="100" width="166" height="80" rx="10" ry="10" fill="#ff6666" stroke="#333" stroke-width="0"/>
+  <text x="233" y="145" font-family="Arial" font-size="18" text-anchor="middle" fill="white">Negative Rewards</text>
+  
+  <!-- Neutral Zone -->
+  <rect x="316" y="100" width="168" height="80" rx="0" ry="0" fill="#f0f0f0" stroke="#333" stroke-width="0"/>
+  <text x="400" y="145" font-family="Arial" font-size="18" text-anchor="middle" fill="#333">Neutral</text>
+  
+  <!-- Positive Rewards -->
+  <rect x="484" y="100" width="166" height="80" rx="10" ry="10" fill="#4fa4a4" stroke="#333" stroke-width="0"/>
+  <text x="567" y="145" font-family="Arial" font-size="18" text-anchor="middle" fill="white">Positive Rewards</text>
+  
+  <!-- Scale Markers -->
+  <line x1="150" y1="190" x2="650" y2="190" stroke="#333" stroke-width="2"/>
+  <line x1="150" y1="185" x2="150" y2="195" stroke="#333" stroke-width="2"/>
+  <line x1="233" y1="185" x2="233" y2="195" stroke="#333" stroke-width="2"/>
+  <line x1="316" y1="185" x2="316" y2="195" stroke="#333" stroke-width="2"/>
+  <line x1="400" y1="185" x2="400" y2="195" stroke="#333" stroke-width="2"/>
+  <line x1="484" y1="185" x2="484" y2="195" stroke="#333" stroke-width="2"/>
+  <line x1="567" y1="185" x2="567" y2="195" stroke="#333" stroke-width="2"/>
+  <line x1="650" y1="185" x2="650" y2="195" stroke="#333" stroke-width="2"/>
+  
+  <text x="150" y="210" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">-10</text>
+  <text x="233" y="210" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">-5</text>
+  <text x="316" y="210" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">-1</text>
+  <text x="400" y="210" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">0</text>
+  <text x="484" y="210" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">+1</text>
+  <text x="567" y="210" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">+5</text>
+  <text x="650" y="210" font-family="Arial" font-size="12" text-anchor="middle" fill="#333">+10</text>
+  
+  <!-- Examples Section -->
+  <text x="400" y="250" font-family="Arial" font-size="20" text-anchor="middle" fill="#333">Examples in a Game Environment</text>
+  
+  <!-- Example 1: Hitting a Wall -->
+  <rect x="100" y="280" width="180" height="180" rx="10" ry="10" fill="#fff" stroke="#333" stroke-width="2"/>
+  <rect x="110" y="290" width="160" height="120" fill="#f0f0f0" stroke="#333" stroke-width="1"/>
+  
+  <!-- Wall -->
+  <rect x="110" y="350" width="160" height="20" fill="#333"/>
+  
+  <!-- Agent -->
+  <circle cx="190" cy="380" r="15" fill="#ff6666" stroke="#333" stroke-width="1"/>
+  <text x="190" y="385" font-family="Arial" font-size="14" text-anchor="middle" fill="white">A</text>
+  
+  <!-- Arrow showing movement -->
+  <path d="M 190 330 L 190 360" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <text x="190" y="440" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Hitting a Wall</text>
+  <text x="190" y="460" font-family="Arial" font-size="16" text-anchor="middle" fill="#ff6666">-5 Points</text>
+  
+  <!-- Example 2: Moving to Empty Space -->
+  <rect x="310" y="280" width="180" height="180" rx="10" ry="10" fill="#fff" stroke="#333" stroke-width="2"/>
+  <rect x="320" y="290" width="160" height="120" fill="#f0f0f0" stroke="#333" stroke-width="1"/>
+  
+  <!-- Agent -->
+  <circle cx="360" cy="330" r="15" fill="#f0f0f0" stroke="#333" stroke-width="1"/>
+  <text x="360" y="335" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">A</text>
+  
+  <!-- Arrow showing movement -->
+  <path d="M 360 330 L 400 330" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <!-- New position -->
+  <circle cx="420" cy="330" r="15" fill="#f0f0f0" stroke="#333" stroke-width="1" stroke-dasharray="5,2"/>
+  <text x="420" y="335" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">A</text>
+  
+  <text x="400" y="440" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Moving Safely</text>
+  <text x="400" y="460" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">0 Points</text>
+  
+  <!-- Example 3: Reaching Goal -->
+  <rect x="520" y="280" width="180" height="180" rx="10" ry="10" fill="#fff" stroke="#333" stroke-width="2"/>
+  <rect x="530" y="290" width="160" height="120" fill="#f0f0f0" stroke="#333" stroke-width="1"/>
+  
+  <!-- Goal -->
+  <circle cx="640" cy="330" r="15" fill="#ffcc00" stroke="#333" stroke-width="1"/>
+  <text x="640" y="335" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">G</text>
+  
+  <!-- Agent -->
+  <circle cx="580" cy="330" r="15" fill="#4fa4a4" stroke="#333" stroke-width="1"/>
+  <text x="580" y="335" font-family="Arial" font-size="14" text-anchor="middle" fill="white">A</text>
+  
+  <!-- Arrow showing movement -->
+  <path d="M 580 330 L 620 330" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <text x="610" y="440" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Reaching Goal</text>
+  <text x="610" y="460" font-family="Arial" font-size="16" text-anchor="middle" fill="#4fa4a4">+10 Points</text>
+  
+  <!-- Arrowhead marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
